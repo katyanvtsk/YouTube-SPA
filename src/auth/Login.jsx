@@ -65,6 +65,7 @@ const Login = () => {
             render={({ field }) => (
               <Input
                 {...field}
+                type="password"
                 placeholder="Введите пароль"
                 className="registration-form__input"
               />
