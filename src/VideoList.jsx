@@ -54,6 +54,17 @@ const VideoList = () => {
     return `${Math.floor(days / 365)} г назад`;
   };
 
+  const getViewCount = (item) => {
+    const count = item.statistics.viewCount || "0";
+    const num = +count;
+    if (num >= 1000) {
+      return `${(num / 1000).toFixed(0)} тыс 👁️`;
+    } else if (num >= 1000000) {
+      return `${(num / 1000000).toFixed(0)} млн 👁️`;
+    }
+    return `${num} 👁️`;
+  };
+
   if (loading) {
     return <LoadingSpinner />;
   }
@@ -100,6 +111,7 @@ const VideoList = () => {
           const videoDescription = getDescription(item);
           const videoImg = getVideoImg(item);
           const videoChannelTitle = getChannelTitle(item);
+          const videoViewCount = getViewCount(item);
           if (view == "grid") {
             return (
               <div key={videoId} className="video-card">
@@ -119,6 +131,7 @@ const VideoList = () => {
                   <p className="video-description">
                     {videoDescription.substring(0, 100)}...
                   </p>
+                  <p className="video-view">{videoViewCount}</p>
                 </div>
               </div>
             );
