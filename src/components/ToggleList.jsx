@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
-import { setList, setGrid } from "./redux/slices/viewSlice";
-import "./styles/count.css";
+import { setList, setGrid } from "../redux/slices/viewSlice";
+import "../styles/count.css";
 
 const ToggleList = () => {
   const dispatch = useDispatch();

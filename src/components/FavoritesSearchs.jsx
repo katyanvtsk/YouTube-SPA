@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
 
-import { selectSavedSearch } from "./redux/slices/savedSlice";
+import { selectSavedSearch } from "../redux/slices/savedSlice";
 import Favorite from "./Favorite";
-import "./styles/favorite.css";
+import "../styles/favorite.css";
 
 const FavoritesSearchs = () => {
   const savedSearch = useSelector(selectSavedSearch); //массив

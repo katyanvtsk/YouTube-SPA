@@ -1,12 +1,12 @@
 import { useForm, Controller } from "react-hook-form";
 import { Input } from "antd";
 import { useDispatch, useSelector } from "react-redux";
-import { selectInputText } from "./redux/slices/inputText";
+import { selectInputText } from "../redux/slices/inputText";
 
 import VideoLimit from "./VideoLimit";
 import { useEffect, useState } from "react";
-import { addSearch, editSearch } from "./redux/slices/savedSlice";
-import "./styles/form.css";
+import { addSearch, editSearch } from "../redux/slices/savedSlice";
+import "../styles/form.css";
 
 const Form = ({ onClose, editData = null }) => {
   const text = useSelector(selectInputText);

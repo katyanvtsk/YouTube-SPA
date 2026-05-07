@@ -1,13 +1,13 @@
 import { Route, Routes } from "react-router";
 import Login from "./auth/Login";
 import RegistrationForm from "./auth/Registration";
-import PrivateRoute from "./PrivateRoute";
-import Search from "./Search";
-import VideoList from "./VideoList";
+import PrivateRoute from "./components/PrivateRoute";
+import Search from "./components/Search";
+import VideoList from "./pages/VideoList";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useNavigate } from "react-router";
 import { logOut, selectAuth } from "./redux/slices/authSlice";
-import FavoritesSearchs from "./FavoritesSearchs";
+import FavoritesSearchs from "./components/FavoritesSearchs";
 import "./App.css";
 import "./styles/nav.css";
 

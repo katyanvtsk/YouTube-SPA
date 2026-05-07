@@ -6,7 +6,7 @@ import { useNavigate } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../redux/slices/authSlice.js";
 import { selectAuth } from "../redux/slices/authSlice.js";
-import LoadingSpinner from "../LoadingSpiner.jsx";
+import LoadingSpinner from "../components/LoadingSpiner.jsx";
 import { setUser } from "../redux/slices/savedSlice.js";
 
 const Login = () => {
@@ -25,8 +25,8 @@ const Login = () => {
 
   useEffect(() => {
     if (success && user) {
-      dispatch(setUser(user.email));
       navigate("/");
+      dispatch(setUser(user.email));
     }
   }, [success, user]);
   return (

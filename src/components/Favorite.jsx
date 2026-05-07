@@ -1,10 +1,10 @@
 import { useState } from "react";
 import Form from "./Form";
-import { deleteSearch } from "./redux/slices/savedSlice";
+import { deleteSearch } from "../redux/slices/savedSlice";
 import { useDispatch } from "react-redux";
-import { searchVideo } from "./redux/slices/videoSlice";
+import { searchVideo } from "../redux/slices/videoSlice";
 import { useNavigate } from "react-router";
-import "./styles/favorite.css";
+import "../styles/favorite.css";
 
 const Favorite = ({ searchData }) => {
   // searchData {id:, search: "", name: "", order: "", limit: }

@@ -1,13 +1,13 @@
 import { useDispatch, useSelector } from "react-redux";
-import { selectInputText } from "./redux/slices/inputText";
-import { change, clearInput } from "./redux/slices/inputText";
+import { selectInputText } from "../redux/slices/inputText";
+import { change, clearInput } from "../redux/slices/inputText";
 import { useEffect, useState } from "react";
-import { searchVideo } from "./redux/slices/videoSlice";
+import { searchVideo } from "../redux/slices/videoSlice";
 import { useLocation, useNavigate } from "react-router";
 import Modal from "./Modal";
 import Form from "./Form";
-import { selectVideo } from "./redux/slices/videoSlice";
-import "./styles/search.css";
+import { selectVideo } from "../redux/slices/videoSlice";
+import "../styles/search.css";
 
 const Search = () => {
   const dispatch = useDispatch();
